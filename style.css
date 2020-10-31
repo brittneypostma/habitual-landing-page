@@ -1,8 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
+  padding: 1rem;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f3f8f7 49.91%,
+    #fff9f5 94.19%
+  );
+
+  font-family: Lato, sans-serif;
+  color: #54575a;
+  font-size: clamp(1rem, 1rem + 0.5vw, 1.25rem);
   min-height: 100vh;
+  max-width: 394px;
+  display: grid;
+  gap: 5rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(3rem, 1rem + 2vw, 4rem);
+  font-weight: 700;
+  line-height: 67px;
+}
+
+.logo {
+  width: 193px;
+}
+
+.heading {
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+}
+
+.store {
+  display: flex;
+  gap: 1rem;
+  justify-self: start;
+}
+
+@media (min-width: 960px) {
+  body {
+    max-width: 960px;
+  }
+  .heading {
+    margin-top: calc(236px - 5rem);
+    display: grid;
+    grid-template-columns: minmax(0, 394px) 534px;
+    place-items: start;
+  }
+  .text-wrapper {
+    grid-area: 1/ 1/ 2 /2;
+  }
+
+  .hero-img {
+    grid-column: 2/-1;
+    justify-self: center;
+  }
 }
