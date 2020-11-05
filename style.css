@@ -48,7 +48,8 @@ h1 {
 
 @media (min-width: 960px) {
   body {
-    max-width: 960px;
+    max-width: 1440px;
+    justify-content: center;
   }
   .heading {
     margin-top: calc(236px - 5rem);
